@@ -1,0 +1,112 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/Graphic1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static './main.css'%}"> 
+    <title>Location</title>
+</head>
+<body>
+    <!-- bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="{% url 'myappurl:index' %}">CARGO SHIPMENTS</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'myappurl:index' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'myappurl:about' %}">About <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'myappurl:track' %}">Track <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'myappurl:contact' %}">Contact <span class="sr-only">(current)</span></a>
+              </li>
+            
+              
+             
+            </li>
+           
+          </ul>
+          
+        </div>
+      </nav>
+    <div class="result">
+        <div class="location">
+            <div class="locate">
+                <h3>PRODUCT DETAILS</h3>
+                {% for a in loc_two %}
+                <!-- <i>STATUS: </i> <b>{{a.status}}</b> <br>
+                <i>Previous Location: </i> <b>{{a.previous_location}}</b> <br>
+                <i>Current Location:  </i> <b>{{a.current_location}}</b> <br>
+                <i>Address:   </i><b>{{a.address}}</b><br>
+                <i>City:  </i> <b>{{a.city}}</b><br>
+                <i>Destination:  </i> <b>{{a.destination}}</b><br>
+                <i>Delivery Date:  </i> <b>{{a.delivery_date}}</b><br> -->
+
+                  <table class="tab">
+                    <tr> 
+                      <td>Status :</td>
+                      <td><b>{{a.status}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>Previous Location:</td>
+                      <td><b>{{a.previous_location}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>Current Location:</td>
+                      <td><b>{{a.current_location}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>Receiver's Address:</td>
+                      <td><b>{{a.address}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>City:</td>
+                      <td><b>{{a.city}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>Destination:</td>
+                      <td><b>{{a.destination}}</b></td>
+
+                    </tr>
+                    <tr> 
+                      <td>Deliver Date</td>
+                      <td><b>{{a.delivery_date}}</b></td>
+
+                    </tr>
+
+                  </table>
+
+                <p class="id_map"> <iframe src="{{a.map}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a> </p>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
+
+{% include 'footer.html' %}

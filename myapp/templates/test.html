@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/details.css'%}" />
+    <title>Shipping Details</title>
+  </head>
+  <body>
+    <div class="contentBox">
+      <div class="shipping">
+        <div class="topBox">
+          <div class="topBar">
+            <div class="shipId">
+              <div class="icon">
+                <a href="/track">
+                  <box-icon
+                    color="#fff"
+                    type="solid"
+                    name="left-arrow-alt"
+                  ></box-icon>
+                </a>
+              </div>
+              <p>{{ tracking_data.track_Number }}</p>
+            </div>
+            <div class="status">
+              <p>{{ tracking_data.status }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="shipBody">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding-right: 20px;
+            "
+          >
+            <h3>Shipping Details</h3>
+
+            <div class="print">
+              <button onclick="window.print()">Print invoice</button>
+            </div>
+          </div>
+          <div class="Inquiry">
+            <div class="shipFrom">
+              <div class="shipTitle">
+                <box-icon color="#F48708" name="current-location"></box-icon>
+                <h3>Ship From</h3>
+              </div>
+              <p>{{ tracking_data.ship_from }}</p>
+            </div>
+
+            <div class="shipFrom">
+              <div class="shipTitle">
+                <box-icon
+                  color="#F48708"
+                  type="solid"
+                  name="location-plus"
+                ></box-icon>
+                <h3>Ship To</h3>
+              </div>
+              <p>{{ tracking_data.ship_to }}</p>
+            </div>
+
+            <div class="shipFrom">
+              <div class="shipTitle">
+                <box-icon
+                  color="#F48708"
+                  name="user-detail"
+                  type="solid"
+                ></box-icon>
+                <h3>Sender Info</h3>
+              </div>
+              <div class="RefBox">
+                <div class="Ref">
+                  <b>Email:</b>
+                  <p>{{ tracking_data.sender_email }}</p>
+                </div>
+                <div class="Ref">
+                  <b>Phone:</b>
+                  <p>{{ tracking_data.sender_phone }}</p>
+                </div>
+                <div class="Ref">
+                  <b>Address:</b>
+                  <p>{{ tracking_data.sender_address }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="shipFrom">
+              <div class="shipTitle">
+                <box-icon color="#F48708" name="user"></box-icon>
+                <h3>Receiver Info</h3>
+              </div>
+              <div class="RefBox">
+                <div class="Ref">
+                  <b>Email:</b>
+                  <p>{{ tracking_data.receiver_email }}</p>
+                </div>
+                <div class="Ref">
+                  <b>Phone:</b>
+                  <p>{{ tracking_data.receiver_phone}}</p>
+                </div>
+                <div class="Ref">
+                  <b>Address:</b>
+                  <p>{{ tracking_data.receiver_address }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trackBox">
+          <h3>Tracking Details</h3>
+          <div class="trackContent">
+            <div class="pBox">
+              <div class="personalDetails" style="background-color: #ffe5ba">
+                <div class="InnerDetails">
+                  <h4>Customer name</h4>
+                  <p>{{ tracking_data.customer_name }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Customer email:</h4>
+                  <p>{{ tracking_data.customer_email }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Customer address:</h4>
+                  <p>{{ tracking_data.customer_address }}</p>
+                </div>
+              </div>
+
+              <div class="personalDetails">
+                <div class="InnerDetails">
+                  <h4>Package</h4>
+                  <p>{{ tracking_data.package }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Shipment mode</h4>
+                  <p>{{ tracking_data.shipment_mode }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Exp. Del. Date</h4>
+                  <p>{{ tracking_data.expected_delivery_date }}</p>
+                </div>
+              </div>
+
+              <div class="personalDetails" style="background-color: #ffe5ba">
+                <div class="InnerDetails">
+                  <h4>Origin</h4>
+                  <p>{{ tracking_data.origin }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Destination</h4>
+                  <p>{{ tracking_data.destination }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Status</h4>
+                  <p>{{ tracking_data.status }}</p>
+                </div>
+              </div>
+
+              <div class="personalDetails">
+                <div class="InnerDetails">
+                  <h4>Weight</h4>
+                  <p>{{ tracking_data.package_weight }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Carrier</h4>
+                  <p>{{ tracking_data.carrier }}</p>
+                </div>
+                <div class="InnerDetails">
+                  <h4>Carrier Ref No:</h4>
+                  <p>{{ tracking_data.carrier_number }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map">
+              <iframe
+                src="{{ tracking_data.map }}"
+                width="460"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overview">
+        <div class="overTop">
+          <div class="shipId">
+            <h3>Shipment Overview</h3>
+          </div>
+        </div>
+        <div class="overBox">
+          <div class="overDiv">
+            <div class="iconBox">
+              <box-icon
+                color="rgb(1, 1, 31)"
+                name="current-location"
+              ></box-icon>
+            </div>
+            <div class="overBody">
+              <h3>Ship From</h3>
+              <p>{{ tracking_data.ship_from }}</p>
+            </div>
+          </div>
+
+          <div class="overDiv">
+            <div class="iconBox">
+              <box-icon
+                color="rgb(1, 1, 31)"
+                type="solid"
+                name="location-plus"
+              ></box-icon>
+            </div>
+            <div class="overBody">
+              <h3>Ship To</h3>
+              <p>{{ tracking_data.ship_to }}</p>
+            </div>
+          </div>
+
+          <div class="overDiv">
+            <div class="iconBox">
+              <box-icon
+                color="rgb(1, 1, 31)"
+                name="truck"
+                type="solid"
+              ></box-icon>
+            </div>
+            <div class="overBody">
+              <h3>Current Location</h3>
+              <p>{{ tracking_data.current_location }}</p>
+            </div>
+          </div>
+
+          <div class="overDiv">
+            <div class="iconBox">
+              <box-icon
+                color="rgb(1, 1, 31)"
+                name="message-square-detail"
+                type="solid"
+              ></box-icon>
+            </div>
+            <div class="overBody">
+              <h3>Package Details</h3>
+              <p>{{ tracking_data.package }}</p>
+            </div>
+          </div>
+
+          <div class="overDiv">
+            <div class="iconBox">
+              <box-icon
+                color="rgb(1, 1, 31)"
+                name="info-circle"
+                type="solid"
+              ></box-icon>
+            </div>
+            <div class="overBody">
+              <h3>Additional Info</h3>
+              <div class="infoBox">
+                <div class="info">
+                  <b>Track Id:</b>
+                  <p>{{ tracking_data.track_Number }}</p>
+                </div>
+                <div class="info">
+                  <b>Product Id:</b>
+                  <p>{{ tracking_data.product_id }}</p>
+                </div>
+                <div class="info">
+                  <b>Customer Ref:</b>
+                  <p>{{ tracking_data.customer_ref }}</p>
+                </div>
+                <div class="info" style="margin-top: 10px; margin-bottom: 10px">
+                  <b>Officer Comment:</b>
+                  <p style="color: #ffe5ba; line-height: 0.8rem">
+                    {{ tracking_data.comment }}
+                  </p>
+                </div>
+                <div style="background-color: #ffe5ba" class="info">
+                  <b>Status:</b>
+                  <p style="color: black">{{ tracking_data.status }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

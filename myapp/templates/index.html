@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="welcome">
+    <div class="note">
+        <h1> <span> Welcome To</span><b> Cargo Shipments</b> </h1>
+        <p> Our warehousing services are known nationwide to be one of the most reliable, safe and affordable, because we take pride in delivering 
+            the best of warehousing services, at the most reasonable prices. Our own warehouses, 
+            as well as our partner’s warehouses are located at strategic locations to ensure that there is no additional cost. <br>
+            Our customer services are superb, got a question for us? Don't forget to contact us as we are available for you 24/7 <br>
+            <b class="excel">Excellence is our Watchword!!!</b>
+        </p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="inner-section">
+        <h2 class="special">CLIENT SATISFACTION IS OUR PRIMARY <br> FOCUS</h2>
+        <P><b> We Deliver with the Speed of Light</b></P>
+    </div>
+
+    <button><a href="{% url 'myappurl:track' %}">Track  </a></button>
+</div>
+
+<!-- Special -->
+<div class="our_special">
+    <h1> <b> Our </b> Services</h1>
+    <div class="css_columns">
+
+        
+            <p class="service"> <ion-icon name="storefront-outline"></ion-icon> <b>Packaging And Storage</b> <br>
+                We package and store your goods
+
+            </p>
+
+            <p class="service"><ion-icon name="home-sharp"></ion-icon> <b>Warehousing</b> <br>
+                We have top notch security and loads of space. Store your stuff in our ware house.​
+
+            </p>
+
+            <p class="service"> <ion-icon name="car-sport-sharp"></ion-icon></ion-icon><b>Ground Transport</b> <br>
+                Transport your things in our super fast moving van
+
+            </p>
+
+            <p class="service"> <ion-icon name="earth-outline"></ion-icon><b>World Wide Transport</b> <br>
+                We can transport your things anywhere in the world
+
+            </p>
+
+            
+            
+
+            <p class="service"> <ion-icon name="home-sharp"></ion-icon> <b>Cargo</b> <br>
+                Let us transport your things from point A to B fast and secure
+
+            </p>
+            
+
+            <p class="col_img">
+                <img src="{% static './img/ship4.avif'%}" alt="">
+                
+            </p>
+            
+        </div>
+
+        
+
+    </div>
+
+
+
+    <!-- comments -->
+
+    <div class="comment">
+        <h2> What Our Client Say </h2>
+        <div class="words">
+            {% for b in com %}
+            <p> <h3>{{b.name}} </h3>
+                <B>" </B> 
+                <i> {{b.comments}}</i> 
+                <B>"</B>
+                
+
+            </p>
+
+            {% endfor %}
+
+            
+        
+
+        </div>
+    </div>
+
+   <!-- gallery -->
+
+   <div class="gallary">
+       <h2><b class="gg"> G a </b> l l e r y </h2>
+   <div class="gala">
+    <p class="col_img">
+        <img src="{% static './img/first.jpg'%}" alt="" style="height: 400px;">
+        
+    </p>
+    <p class="col_img">
+        <img src="{% static './img/aero2.jpg'%}" alt="" style="height: 400px;">
+        
+    </p>
+
+    <p class="col_img">
+        <img src="{% static './img/truck.jpeg'%}" alt="" style="height: 400px;">
+        
+    </p>
+   </div>
+</div>
+
+
+<!-- counting numbers -->
+<div class="achive">
+    <h2><b> Our </b>  Achievements </h2>
+<div class="wrapper">
+
+    <div class="cone">
+        <span class="num" data-val="1500">213</span>
+        <span class="text">Awards</span>
+    </div>
+
+    <div class="cone">
+        <span class="num" data-val="2000">232</span>
+        <span class="text">Offices Worldwide</span>
+    </div>
+
+    <div class="cone">
+        <span class="num" data-val="130">124</span>
+        <span class="text">Country Covered</span>
+    </div>
+
+    <div class="cone">
+        <span class="num" data-val="1200">205</span>
+        <span class="text">Hardworking People</span>
+    </div>
+
+</div>
+
+    <!-- <div class="cone">
+        <span class="num" data-val="400">000</span>
+        <span class="text">Meals Delivered</span>
+    </div>
+
+    <div class="cone">
+        <span class="num" data-val="400">000</span>
+        <span class="text">Meals Delivered</span>
+    </div> -->
+
+</div>
+
+
+
+
+<!-- <div class="card">
+    <div class="card__inner">
+        <div class="card__face card__face--front">
+            <h2>Developer Card</h2>
+        </div>
+        <div class="card__face card__face--back">
+            <div class="card__content">
+                <div class="card__header">
+                    <img src="{% static './img/air.jpg'%}" alt="" class="pp">
+                    <h2>Tyler Pottis</h2>
+                </div>
+                <div class="card__body">
+                    <h3>JavaScript Wizard</h3>
+                    <p>
+                        "This is the fastest delivery company I have known,
+                        I will recommend it any time. Never dissapointing and theier 
+                        customer relation is superb"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="contact-us">
+    <h2><b> Contact</b> Us </h2>
+    <div class="contact-content">
+        <p> 
+            <ion-icon name="location-outline"></ion-icon>
+            <h3>Address</h3>
+
+            125, Central Square, <br>
+            New York, NY 286
+
+        </p>
+        <p>
+            <ion-icon name="call-outline"></ion-icon>
+            <h3>Call Us</h3>
+
+            +447-7231-72932
+
+        </p>
+
+        <p> 
+            <ion-icon name="mail-outline"></ion-icon>
+            <h3>E-Mail</h3>
+
+            support@cargoshipments.com
+
+        </p>
+        <p>
+            <ion-icon name="time-outline"></ion-icon>
+            <h3>Working Hours</h3>
+            Mon-Fri: 10AM-5PM <br>
+                Sat-Sun: 10AM-1PM
+
+        </p>
+    </div>
+    </div>
+
+
+
+
+
+<script src="{% static './js/card.js'%}"></script>
+<script src="{% static './js/count.js'%}"></script>
+
+{% endblock content %}

@@ -1,0 +1,406 @@
+/* body {} */
+
+.contentBox {
+    display: flex;
+    width: 100%;
+}
+
+.shipping {
+    width: 75%;
+}
+
+.topBox {
+    background: rgb(1, 1, 31);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.print {
+    display: flex;
+    align-items: center;
+}
+
+.print button {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 33, 1);
+    border-radius: 15px;
+    color: #1E1E1E;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+    height: 20px;
+    border: none;
+    color: #fff;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.shipId {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shipId p {
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 101.336%;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+
+}
+
+.status p {
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 6px 6px;
+    border-radius: 15px;
+    color: #1E1E1E;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+    /* 16.214px */
+}
+
+.shipBody {
+    padding-left: 20px;
+}
+
+.shipBody h3 {
+    color: #1E1E1E;
+    font-family: "Mulish", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+}
+
+.Inquiry {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.shipFrom {
+    width: 230px;
+}
+
+.shipTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.shipTitle h3 {
+    color: #1E1E1E;
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+    margin: 0;
+}
+
+.shipFrom p {
+    color: #2a2727;
+    font-family: "Mulish", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2rem;
+
+}
+
+.Ref {
+    display: flex;
+    align-items: center;
+}
+
+.Ref b {
+    width: 50px;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.Ref p {
+    color: #2a2727;
+    font-family: "Mulish", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+.trackBox {
+    padding-left: 20px;
+}
+
+.trackBox h3 {
+    color: #1E1E1E;
+    font-family: "Mulish", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+}
+
+.trackContent {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.pBox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.personalDetails {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.InnerDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 160px;
+}
+
+.InnerDetails h4 {
+    margin: 0;
+    color: rgb(1, 1, 20);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 101.336%;
+}
+
+.InnerDetails p {
+    color: #1E1E1E;
+    font-family: "Mulish", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101.336%;
+    margin: 0;
+}
+
+
+.overview {
+    width: 25%;
+    height: 100vh;
+    background: #1E1E1E;
+}
+
+.overTop {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 15px;
+    padding-left: 20px;
+    background: #fac97b;
+}
+
+.overBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.overDiv {
+    display: flex;
+    gap: 13px;
+    width: 250px;
+    align-items: flex-start;
+}
+
+.shipId h3 {
+    color: rgb(1, 1, 33);
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 101.336%;
+}
+
+.iconBox {}
+
+.overBody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.overBody h3 {
+    color: #fff;
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 101.336%;
+    margin: 0;
+}
+
+.overBody p {
+    color: #7b7171;
+    font-family: "Mulish", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2rem;
+    margin: 0;
+}
+
+.infoBox {}
+
+.info {
+    display: flex;
+    gap: 5px;
+}
+
+.info b {
+    width: 100px;
+    color: #000;
+    font-family: "Mulish", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 1.2rem;
+    margin: 0;
+}
+
+.info p {
+    width: 100px;
+    color: #7b7171;
+    font-family: "Mulish", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 1.2rem;
+    margin: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 1330px) {
+    .shipping {
+        width: 100%;
+    }
+
+    .contentBox {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    .overview {
+        width: 100%;
+        height: 100%;
+        background: #1E1E1E;
+        padding-bottom: 20px;
+    }
+
+    .pBox {
+        width: 100%;
+
+
+    }
+
+    .overBox {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .shipFrom {
+        width: 100%;
+    }
+
+    .shipFrom p {
+        margin-left: 30px;
+        width: 250px;
+    }
+
+    .RefBox {
+        margin-left: 30px;
+
+    }
+
+    .InnerDetails {
+        margin-bottom: 10px;
+    }
+
+    .Inquiry {
+        background-color: rgba(1, 1, 27, 0.146);
+        border-radius: 3px;
+
+    }
+
+    .status p {
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        padding: 4px 4px;
+        border-radius: 15px;
+        color: #1E1E1E;
+        text-align: center;
+        font-family: "Mulish", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 101.336%;
+        /* 16.214px */
+    }
+
+
+}

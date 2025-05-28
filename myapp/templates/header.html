@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/Graphic1.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static './js/bootstrap.min.js'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static './style.css'%}">
+    <link rel="stylesheet" href="{% static './main.css'%}">
+    <title>Cargo Shipments | International </title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">  CARGO <span> Shipment</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <div class="inner">
+                            <h2 class="title">Wecome to Cargo Shipments</h2>
+                            <p>
+                                The most reliable shipping company around the Globe
+                            </p>
+                            <a href="{% url 'myappurl:track' %}" class="btn">Track ... </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="{% url 'myappurl:index' %}" style="--i: 0.05s">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'myappurl:about' %}"style="--i: 0.1s">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'myappurl:contact' %}"style="--i: 0.15s">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="{% url 'myappurl:track' %}"style="--i: 0.25s">Track</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <script src="{% static './js/script.js'%}"></script>
+    <script src="{% static './js/track.js'%}"></script>
+</body>
+</html>
