@@ -53,7 +53,7 @@ class location_two(models.Model):
 
 class TrackDatas(models.Model):
     track_Number = models.CharField(
-           max_length = 10,
+           max_length = 1000,
            blank=True,
            editable=False,
            unique=True,
