@@ -88,7 +88,8 @@ DATABASES = {
         'PASSWORD': "Zlsp3qAEGra5SdlO",
         'PORT': "5432",
         'OPTIONS': {
-            'options': '-c default_transaction_isolation=serializable -c timezone=UTC'
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
         },
     }
 }
