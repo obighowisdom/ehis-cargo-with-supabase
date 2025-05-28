@@ -86,7 +86,10 @@ DATABASES = {
         'HOST': "aws-0-eu-central-1.pooler.supabase.com",
         'USER': "postgres.yawzjqsjuqgggjafbins",
         'PASSWORD': "Zlsp3qAEGra5SdlO",
-        'PORT': "5432"
+        'PORT': "5432",
+        'OPTIONS': {
+            'options': '-c default_transaction_isolation=serializable -c timezone=UTC'
+        },
     }
 }
 
