@@ -5,9 +5,6 @@ from .models import location
 from .models import location_two
 from .models import TrackDatas
 
-
-
-
 # Register your models here.
 
 admin.site.register(cons)
