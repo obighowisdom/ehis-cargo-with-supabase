@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myapp.middleware.MaintenanceModeMiddleware',
 ]
 
 ROOT_URLCONF = 'all.urls'
@@ -114,6 +115,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://cargoeshipment.com/'
    
 ]
+
+MAINTENANCE_MODE = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

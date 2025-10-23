@@ -481,8 +481,12 @@ span.text{
 }
 
 .gala{
-    column-count: 3;
-    column-width: 250px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-between;
+   gap: 6px;
     /* margin: 1.3rem; */
 }
 
