@@ -116,7 +116,7 @@ CSRF_TRUSTED_ORIGINS = [
    
 ]
 
-MAINTENANCE_MODE = False
+MAINTENANCE_MODE = True
 
 
 # Internationalization
